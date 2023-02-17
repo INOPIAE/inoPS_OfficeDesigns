@@ -1,15 +1,14 @@
-# inoPS_OfficeDesigns
-Eine Sammlung von Scripten zum Arebiten mit Office Designs.
+# inoPS OfficeDesigns
+Eine Sammlung von Scripten zum Arbeiten mit Office Designs und BuilingBlocks.
 
-##Office Designs
+## Office Designs
 ### Erstellen von Office Designs
 
-Am besten erstellt man ein Office Design aus PowerPoint heraus.
-
+Am besten erstellt man ein Office Design aus PowerPoint heraus, in dem das aktuelle Design einer Präsentation über Entwurf - Designs - Designs - aktuelles Design speichern gespreichert wird
 
 ### Speicherort
 
-Die Office Designs werden an 2 Stellen gespeichert.
+Die Office Designs sind an 2 Stellen gespeichert.
 
 Benutzerdefinierter Pfad
 
@@ -30,7 +29,7 @@ Systempfad
 
    Excel-Vorlage: Mappe.xltx
 
-   Der Name der Excel-Vorlage ist abhängig von der Systemsprache unterscheiden kann. Ist die Systemsprache zum Beispiel Englisch ist, den Namen der Excel-Vorlage auf book.xltx anpassen.
+   Der Name der Excel-Vorlage ist abhängig von der Systemsprache unterscheiden kann. Ist die Systemsprache zum Beispiel Englisch ist, den Namen der Excel-Vorlage auf Book.xltx anpassen.
 
 2. Legen Sie nun die PowerPoint- und Word-Vorlage unter dem folgenden Pfad ab:
 
@@ -40,7 +39,7 @@ Systempfad
 
     `C:\Users\USERNAME\AppData\Roaming\Microsoft\Excel\XLSTART`
 
-In Excel und Word muss die Einstellung "Startbildschirm beim Start dieser Anwendung anzeigen" deaktiviert sein. Die Einstellung findet sich umter Datei - Optionen in der Kategorie allgemein.
+In Excel und Word muss die Einstellung "Startbildschirm beim Start dieser Anwendung anzeigen" deaktiviert sein. Die Einstellung findet sich unter Datei - Optionen in der Kategorie allgemein.
 
 ### Anpassen einer bestehenden Normal.dotx
 
@@ -53,7 +52,7 @@ Entweder die Datei manuell bearbeiten:
 
 Oder die Scriptdatei verwenden.
 
-``` WordNormalDotAnpassen.ps1 -xmlFileOutside ="XML-Datei zum Austausch" -$originalFile = "Normal.dotm" ```
+``` WordNormalDotAnpassen.ps1 -xmlFileOutside ="PFAD\XML-Datei zum Austausch" -$originalFile = "PFAD\Normal.dotm" ```
 
 ### Löschen der MS Standard-Designs
 
@@ -67,6 +66,8 @@ Bis auf das Office Theme können alle Themes aus dem Pfad `C:\Program Files\Micr
 Am besten erstellt man ein neue Building Blocks.dotx in dem man die eine bestehende BuildingBlocks.dotx kopiert und umbennent.
 
 ### Speicherort
+
+Die Building Blocks Designs sind an 2 Stellen gespeichert.
 
 Benutzerdefinierter Pfad
 
