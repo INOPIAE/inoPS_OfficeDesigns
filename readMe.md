@@ -1,15 +1,16 @@
-# inoPS_OfficeDesigns
-Eine Sammlung von Scripten zum Arebiten mit Office Designs.
+# inoPS OfficeDesigns
+Eine Sammlung von Scripten zum Arbeiten mit Office Designs und BuilingBlocks.
 
-##Office Designs
+## Office Designs
 ### Erstellen von Office Designs
 
-Am besten erstellt man ein Office Design aus PowerPoint heraus.
+Am besten erstellt man ein Office Design aus PowerPoint heraus, in dem das aktuelle Deaign einer Präsentation über Entwurf - Designs - Designs -aktuelles Design speichern gespreichert wird
+
 
 
 ### Speicherort
 
-Die Office Designs werden an 2 Stellen gespeichert.
+Die Office Designs sind an 2 Stellen gespeichert.
 
 Benutzerdefinierter Pfad
 
@@ -53,7 +54,7 @@ Entweder die Datei manuell bearbeiten:
 
 Oder die Scriptdatei verwenden.
 
-``` WordNormalDotAnpassen.ps1 -xmlFileOutside ="XML-Datei zum Austausch" -$originalFile = "Normal.dotm" ```
+``` WordNormalDotAnpassen.ps1 -xmlFileOutside ="PFAD\XML-Datei zum Austausch" -$originalFile = "PFAD\Normal.dotm" ```
 
 ### Löschen der MS Standard-Designs
 
@@ -67,6 +68,8 @@ Bis auf das Office Theme können alle Themes aus dem Pfad `C:\Program Files\Micr
 Am besten erstellt man ein neue Building Blocks.dotx in dem man die eine bestehende BuildingBlocks.dotx kopiert und umbennent.
 
 ### Speicherort
+
+Die Building Blocks Designs sind an 2 Stellen gespeichert.
 
 Benutzerdefinierter Pfad
 
