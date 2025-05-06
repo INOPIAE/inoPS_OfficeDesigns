@@ -76,3 +76,15 @@ Benutzerdefinierter Pfad
 Systempfad
 
 `C:\Program Files\Microsoft Office\root\Office16\Document Parts\1031\16`
+
+## Skripte
+
+Die PowerShell-Skripte finden sich im Ordner [scripts](.\scripts).
+
+Die Skripte liegen zweimal vor. Einmal unsigniert und einmal signiert.
+
+Für die signierten Dateien kann es notwendig sein, die Stammzertifikate der benutzten CA in die Truststores von Windows hinzuzufügen.
+
+Die Stammzertifikate befinden sich im Ordner [certificates](.\certificates).
+
+Root zu den `Vertrauenswürdigen Stammzertifizierungsstellen` und die andere Datei zu `Zwischenzertifizierungsstellen`.
