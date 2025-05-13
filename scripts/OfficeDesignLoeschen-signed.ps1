@@ -7,17 +7,35 @@ Param(
 # Standardvorlagen entfernen
 # $keepDesign = "Unternehmen.*"  bzw $keepDesign = "Unternehmen1.*, Unternehmen2.*"
 
-Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\*.thmx' -Exclude $keepDesign
-Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\Theme Colors\*.xml' -Exclude $keepDesign
-Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\Theme Fonts\*.xml'  -Exclude $keepDesign
-#Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\Theme Effects\*.eftx' 
+# Office 32 bit
 
-Remove-Item -Path 'C:\Users\User\AppData\Roaming\Microsoft\Templates\LiveContent\16\Managed\Document Themes\1031\*.thmx'
+$folderPath = 'C:\Program Files (x86)\Microsoft Office\'
+
+if (Test-Path -Path $folderPath) {
+	Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\*.thmx' -Exclude $keepDesign
+	Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\Theme Colors\*.xml' -Exclude $keepDesign
+	Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\Theme Fonts\*.xml'  -Exclude $keepDesign
+	#Remove-Item -Path 'C:\Program Files (x86)\Microsoft Office\root\Document Themes 16\Theme Effects\*.eftx' 
+}
+
+# Office 64 bit
+
+$folderPath = 'C:\Program Files\Microsoft Office\'
+
+if (Test-Path -Path $folderPath) {
+	Remove-Item -Path 'C:\Program Files\Microsoft Office\root\Document Themes 16\*.thmx' -Exclude $keepDesign
+	Remove-Item -Path 'C:\Program Files\Microsoft Office\root\Document Themes 16\Theme Colors\*.xml' -Exclude $keepDesign
+	Remove-Item -Path 'C:\Program Files\Microsoft Office\root\Document Themes 16\Theme Fonts\*.xml'  -Exclude $keepDesign
+	#Remove-Item -Path 'C:\Program Files\Microsoft Office\root\Document Themes 16\Theme Effects\*.eftx' 
+}
+
+$TemplatesPfad = Join-Path $env:APPDATA 'Microsoft\Templates\LiveContent\16\Managed\Document Themes\1031\*.thmx'
+Remove-Item -Path $TemplatesPfad
 # SIG # Begin signature block
 # MIIOfAYJKoZIhvcNAQcCoIIObTCCDmkCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBRK4Arsefhm1/+
-# 963bX/4Uo7kGD4BvbexS45ky9LwxMKCCC8UwggWAMIIDaKADAgECAgMDDbkwDQYJ
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBBgX+WWrO9zWap
+# Ed9lATbS8JD2Vx7EbEX/yueLQ56RnqCCC8UwggWAMIIDaKADAgECAgMDDbkwDQYJ
 # KoZIhvcNAQENBQAwVDEUMBIGA1UEChMLQ0FjZXJ0IEluYy4xHjAcBgNVBAsTFWh0
 # dHA6Ly93d3cuQ0FjZXJ0Lm9yZzEcMBoGA1UEAxMTQ0FjZXJ0IENsYXNzIDMgUm9v
 # dDAeFw0yNTAxMDMwNjI4MzhaFw0yNzAxMDMwNjI4MzhaMEAxGTAXBgNVBAMMEE1h
@@ -84,12 +102,12 @@ Remove-Item -Path 'C:\Users\User\AppData\Roaming\Microsoft\Templates\LiveContent
 # SW5jLjEeMBwGA1UECxMVaHR0cDovL3d3dy5DQWNlcnQub3JnMRwwGgYDVQQDExND
 # QWNlcnQgQ2xhc3MgMyBSb290AgMDDbkwDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYB
 # BAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAc
-# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFjAvBgkqhkiG9w0BCQQxIgQgVv9e
-# 1Lx3fFTxI1KGxAHxs71B2U0n76tS0KpaYsYWs5kwDQYJKoZIhvcNAQEBBQAEggEA
-# SNRoWjt5nHqq5BNX4ZCf78f1c/t3tY5OEoaCS1ZDLHjhBTPCgsHWEMLyAVN7wRTI
-# b0a54Ca4guKDiaAfIFT8Y1J8RCWhkb/HHsBbWRAEatbC3irsKmTuC/xT6+AQAVV4
-# m2uNUUZnMySf1KIlDOjYtXR3Vl0EqC6fbqIb4gmmn1/kIeIKyivpksjEifLLYqnV
-# TLsfi44g69Ipw0lvJhirNQe8p7blzu3pnKiuIQdgKGQjj2cdYBv2sxz/30SbZa8c
-# /iGT5r4nQtr4fYkZJf+xtz6fwL8a2aqFKl35SOwTTQZ4tD7HP/p2a/JLz+3YZuL2
-# kZJg0+z+9du2ncl4DK/K6g==
+# BgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFjAvBgkqhkiG9w0BCQQxIgQg+3Gi
+# gs/m43XxKXp+dTNQgzTYjVdU+ZKjDaYyNHzRRBAwDQYJKoZIhvcNAQEBBQAEggEA
+# nil+VEzV1EXeE4DexT+aGK/H9sZn77cTG8tNiPbVzHZV/QtgAcO3FWfZhTowGzTt
+# tjxhWF3BfOcadEnp+VC/ZCYcK2dypG7cNQN1C42wxto3go5m7w20nd8haXwYzqCV
+# E4B6UNsAwWu9EsgRB3gq66CKfjLPtkABmtmfPKzwro6tiICgKJp86otqt9D6XFip
+# 893MJCpa9oD7yecdJnarjG9U9OSarD2+qIHGzt27gn0MvxCAnsPeBwtmtuzppXIS
+# 52qQn8oUbkXQiznT+voFGGDcmOUnsXM2NHETDZibPGPJMPeRM4xuVSzHVoOSVi+8
+# BayR3CMC+vMsbsSRvv8MhQ==
 # SIG # End signature block

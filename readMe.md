@@ -56,14 +56,13 @@ Oder die Scriptdatei verwenden.
 
 ### Löschen der MS Standard-Designs
 
-Bis auf das Office Theme können alle Themes aus dem Pfad `C:\Program Files\Microsoft Office\root\Document Themes 16` gelöscht werden.
-
-``` OfficeDesignLoeschen.ps1 -keepDesign = "Unternehmen.*" ```
+Bis auf das Office Theme können alle Themes aus dem Pfad `C:\Program Files\Microsoft Office\root\Document Themes 16` und `C:\Users\User\AppData\Roaming\Microsoft\Templates\LiveContent\16\Managed\Document Themes\1031\` gelöscht werden. Das Skript berückstichtig die Installation von Office 32 und 64 bit.
+``` OfficeDesignLoeschen.ps1 -keepDesign "Unternehmen.*" ```
 
 ## Building Blocks
 ### Erstellen von eigenen BuildingBlocks.dotx
 
-Am besten erstellt man ein neue Building Blocks.dotx in dem man die eine bestehende BuildingBlocks.dotx kopiert und umbennent.
+Am besten erstellt man ein neue Building Blocks.dotx, in dem man die eine bestehende BuildingBlocks.dotx kopiert und umbennent.
 
 ### Speicherort
 
